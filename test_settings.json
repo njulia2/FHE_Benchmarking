@@ -1,0 +1,74 @@
+{
+    "out_file" : "test_output.txt",
+    "tests" : [
+        {
+        "desc" : "FHE Logistic Regression, 10 Runs",
+        "type" : "log_reg",
+        "encryption" : "FHE", 
+        "pyfhel_params": {
+            "scheme": "CKKS",
+            "n": 16384,
+            "scale": 1073741824,
+            "qi_sizes": [60, 30, 30, 30, 60]
+        },
+        "data_type" : "float", 
+        "runs" : 10
+        },
+        {
+        "desc" : "No Encrpytion Logistic Regression, 10 Runs",
+        "type" : "log_reg",
+        "encryption" : "None", 
+        "data_type" : "float", 
+        "runs" : 10
+        },
+        {
+        "desc" : "FHE Matrix Multiply, 5x5 Float 10 Runs",
+        "type" : "mat_mul",
+        "encryption" : "FHE", 
+        "pyfhel_params": {
+            "scheme": "CKKS",
+            "n": 16384,
+            "scale": 1073741824,
+            "qi_sizes": [60, 30, 30, 30, 60]
+        },
+        "data_type" : "float", 
+        "runs" : 100, 
+        "scale" : 10, 
+        "mat_size" : [5, 5]
+        },
+        {
+        "desc" : "FHE Matrix Multiply, 5x5 Int 10 Runs",
+        "type" : "mat_mul",
+        "encryption" : "FHE", 
+        "data_type" : "int", 
+        "pyfhel_params" : {
+            "scheme": "BFV",
+            "n": 8192,
+            "t": 65537,
+            "t_bits": 20,
+            "sec": 128
+        },
+        "runs" : 100, 
+        "scale" : 10, 
+        "mat_size" : [5, 5]
+        },
+        {
+        "desc" : "No Encryption Matrix Multiply, 5x5 Int 10 Runs",
+        "type" : "mat_mul",
+        "encryption" : "NONE", 
+        "data_type" : "int", 
+        "runs" : 100, 
+        "scale" : 10, 
+        "mat_size" : [5, 5]
+        },
+        {
+        "desc" : "No Encryption Matrix Multiply, 5x5 Float 10 Runs",
+        "type" : "mat_mul",
+        "encryption" : "NONE", 
+        "data_type" : "float", 
+        "runs" : 100, 
+        "scale" : 10, 
+        "mat_size" : [5, 5]
+        }
+    ]
+}
