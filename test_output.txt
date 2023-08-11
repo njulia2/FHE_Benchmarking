@@ -1,0 +1,18 @@
+Running Test: 0, FHE Logistic Regression, 10 Runs
+Using Args: [{'scheme': 'CKKS', 'n': 16384, 'scale': 1073741824, 'qi_sizes': [60, 30, 30, 30, 60]}] Average Execution Time (Runs 10) : 24.38437752719983
+Running Test: 1, AES Logistic Regression, 10 Runs
+Using Args: [] Average Execution Time (Runs 10) : 0.009798181099904468
+Running Test: 2, No Encrpytion Logistic Regression, 10 Runs
+Using Args: [] Average Execution Time (Runs 10) : 0.007635047700023279
+Running Test: 3, FHE Matrix Multiply, 5x5 Float 10 Runs
+Using Args: [5, 5, 10, {'scheme': 'CKKS', 'n': 16384, 'scale': 1073741824, 'qi_sizes': [60, 30, 30, 30, 60]}] Average Execution Time (Runs 100) : 3.993794034550192
+Running Test: 4, FHE Matrix Multiply, 5x5 Int 10 Runs
+Using Args: [5, 5, 10, {'scheme': 'BFV', 'n': 8192, 't': 65537, 't_bits': 20, 'sec': 128}] Average Execution Time (Runs 100) : 8.111141221830003
+Running Test: 5, AES Encryption Matrix Multiply, 5x5 Int 10 Runs
+Using Args: [5, 5, 10] Average Execution Time (Runs 100) : 0.0020447516300191636
+Running Test: 6, AES Encryption Matrix Multiply, 5x5 Float 10 Runs
+Using Args: [5, 5, 10] Average Execution Time (Runs 100) : 0.0018771615398509311
+Running Test: 7, No Encryption Matrix Multiply, 5x5 Int 10 Runs
+Using Args: [5, 5, 10] Average Execution Time (Runs 100) : 1.150107000285061e-05
+Running Test: 8, No Encryption Matrix Multiply, 5x5 Float 10 Runs
+Using Args: [5, 5, 10] Average Execution Time (Runs 100) : 1.1857860008603894e-05
